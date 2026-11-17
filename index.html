@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#12483e">
+<title>非标产品报价查询</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<main>
+<header>
+<div class="under">
+<h1>非标产品报价查询</h1>
+<button id="importBtn">更新报备表</button>
+</div>
+<div id="meta">
+</div>
+</header>
+<div class="controls">
+<input id="search" type="search" aria-label="搜索产品" placeholder="输入编码、图号、产品名称或规格">
+<div class="bar">
+<label>
+<input id="multi" type="checkbox"> 只看多期报价</label>
+<span id="count" class="small" aria-live="polite">
+</span>
+</div>
+</div>
+<p id="status" role="status">
+</p>
+<noscript>请用支持 JavaScript 的手机浏览器打开。</noscript>
+<div id="results">
+</div>
+<button id="more" hidden>查看更多产品</button>
+<input type="file" id="file" accept=".xlsx" hidden>
+<dialog id="update">
+<h2>更新本机报价</h2>
+<p id="preview">
+</p>
+<div class="under">
+<button id="cancel">取消</button>
+<button class="primary" id="apply">使用这份报备表</button>
+</div>
+</dialog>
+</main>
+<script type="application/json" id="seed">[]</script>
+<script src="./vendor/jszip.min.js">
+</script>
+<script src="./app.js">
+</script>
+</body>
+</html>
+
